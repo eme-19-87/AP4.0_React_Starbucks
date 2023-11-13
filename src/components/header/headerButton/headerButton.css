@@ -1,0 +1,31 @@
+li.nav-item{
+  background-color: white;
+  border: 0px;
+  padding: 0px;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  color:black;
+  font-weight: bold;
+
+}
+li.nav-item:hover:before {
+  content: "";
+  width: 100%;
+  bottom: -20px;
+  background: #00754a;
+  height: 5px;
+  position: absolute;
+}
+
+li.header__button--right {
+  margin-left: auto;
+  margin-right: 5%;
+}
+li.header__button img {
+  display: block;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}

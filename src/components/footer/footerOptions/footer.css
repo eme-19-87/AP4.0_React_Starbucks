@@ -1,0 +1,19 @@
+.opcion:hover{
+	color:black;
+}
+
+.opcion{
+	color:#777
+}
+
+.cabecera{
+	font-size: 1.188rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.logo__fiscal{
+	width: 65px;
+	height: 88px;
+	margin-left: 0;
+}
