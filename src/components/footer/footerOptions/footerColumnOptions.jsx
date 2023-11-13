@@ -3,6 +3,7 @@ import FooterOptionsList from "./footerOptionsList";
 
 
 function FooterColumnOptions({cabecera,opciones}){
+	
 	let tamanio="col-md-6 col-sm-12";
 	if(cabecera==="Impacto Social" || cabecera==="Experiencia Starbucks"){
 		tamanio+=" col-lg-2";

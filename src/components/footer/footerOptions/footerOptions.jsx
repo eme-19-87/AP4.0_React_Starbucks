@@ -1,5 +1,6 @@
 import React from "react";
 import FooterColumnOptions from "./footerColumnOptions";
+import FooterAccordion from './footerAccordion';
 import "./footer.css";
 import DatosFiscales from "../../../assets/img-data-fiscal.jpg"
 const columnas=[
@@ -24,8 +25,7 @@ const columnas=[
 
 ];
 
-function FooterOptions(){
-
+function footerOptionsDesktop(){
 	return(
 
 		<div className="container">
@@ -46,7 +46,31 @@ function FooterOptions(){
 			   </div>
 			</div>
 	    </div>
-	)
+		)
+	
+}
+
+
+function footerOptionsMobile(){
+
+	return (columnas.map((col) => {
+	              return <FooterAccordion cabecera={col.cabecera} 
+	              opciones={col.opciones} />;
+	            })
+	);
+	
+}
+
+
+function FooterOptions({ancho}){
+		alert(ancho);
+	    if(ancho<=450){
+	    	return footerOptionsMobile();
+	    }else{
+	    	return footerOptionsDesktop();
+	    }
+		
+	
 }
 
 export default FooterOptions;
