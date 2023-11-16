@@ -1,0 +1,28 @@
+
+
+
+.img__product{
+	border-radius: 50%;
+}
+
+.radius__card{
+	border-radius:50%;
+	background-color: green;
+	width:160px;
+	height: 160px;
+	box-sizing: border-box;
+	margin-left: 30%;
+
+	
+}
+
+.radius__card:hover{
+  border-color: grey;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.card-footer{
+	background-color: white!important;
+	border:0!important;
+}

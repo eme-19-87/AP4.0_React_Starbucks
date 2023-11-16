@@ -15,7 +15,7 @@ function FooterColumnOptions({cabecera,opciones}){
 		<div className={tamanio}>
 		   
 			<ul> 
-				<li className="mb-3 ms-0 cabecera text-regular">
+				<li className="mb-3 ms-0 cabecera">
 				   {cabecera!=="Datos Fiscales"?cabecera:""}
 				</li>
 				{opciones.map((op) => {

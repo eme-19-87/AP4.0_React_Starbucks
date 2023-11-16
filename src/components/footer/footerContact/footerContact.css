@@ -1,0 +1,21 @@
+
+i{
+	font-size: 30px;
+
+}
+
+i:hover{
+	/*background-color: red;*/
+	box-shadow: red;
+}
+
+.contact__option{
+	text-decoration:none;
+	color:grey;
+	cursor:pointer;
+}
+
+
+.contact__option:hover{
+	color:rgb(10,10,10);
+}

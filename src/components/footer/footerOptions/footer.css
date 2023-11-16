@@ -1,9 +1,11 @@
+
+
 .opcion:hover{
 	color:black;
 }
 
 .opcion{
-	color:#777
+	color:#777;
 }
 
 .cabecera{
@@ -15,5 +17,6 @@
 .logo__fiscal{
 	width: 65px;
 	height: 88px;
-	margin-left: 0;
+	margin-left:10%;
+	
 }

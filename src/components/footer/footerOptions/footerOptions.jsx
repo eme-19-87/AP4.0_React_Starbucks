@@ -29,7 +29,7 @@ function footerOptionsDesktop(){
 	return(
 
 		<div className="container">
-			<hr/>
+			
 			<div className="row">
 
 			    {columnas.map((col) => {
@@ -53,10 +53,18 @@ function footerOptionsDesktop(){
 
 function footerOptionsMobile(){
 
-	return (columnas.map((col) => {
+	return (
+		<>
+		{
+			columnas.map((col) => {
 	              return <FooterAccordion cabecera={col.cabecera} 
 	              opciones={col.opciones} />;
 	            })
+		}
+		<img src={DatosFiscales} className=" logo__fiscal" alt="Logo datos fiscales"/>
+		</>
+
+		
 	);
 	
 }

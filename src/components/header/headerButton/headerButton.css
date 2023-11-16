@@ -6,8 +6,7 @@ li.nav-item{
   cursor: pointer;
   position: relative;
   list-style: none;
-  color:black;
-  font-weight: bold;
+  
 
 }
 li.nav-item:hover:before {
@@ -28,4 +27,9 @@ li.header__button img {
   padding: 0;
   width: 50px;
   height: 50px;
+}
+
+.color__text{
+  color:black;
+  font-weight: bold;
 }
