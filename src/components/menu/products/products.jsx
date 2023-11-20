@@ -1,6 +1,13 @@
 import React from 'react';
 import OneProduct from './oneProduct'
 
+/**
+*
+* Permite mostrar los productos indicando su categoría y lalista de productos
+*
+* @param {text} title -Representa el título de la categoría del producto
+* @param {array} productList -Representa una lista con los datos del producto
+*/
 function Products({data:{title, productList}}){
 
 	return(

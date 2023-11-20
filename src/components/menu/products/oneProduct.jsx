@@ -2,9 +2,16 @@ import React from 'react';
 import Prod1 from "../../../assets/producto1.png";
 import "./products.css";
 
+/**
+*
+* Permite mostrar un producto en específico en la pantalla
+*
+* @param {text} img -Representa la ruta de la imagen del producto
+* @param {text} name -Representa el nombre del producto
+*/
 function OneProduct({data:{img,name}}){
   return (
-  <div class="col-lg-4 col-sm-2 col-md-2">
+  <div class="col-lg-4 col-sm-12 col-md-4">
   <div class="card radius__card">
     
     <div class="card-body">

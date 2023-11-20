@@ -7,6 +7,15 @@ import Chocolate from '../../assets/Chocolate Caliente.png';
 import DulceLeche from '../../assets/Dulce de leche Frapp.png'
 import ICM from '../../assets/Iced Caramel Macchiato.png'
 
+/**
+* @param {array} products -Representa un arreglo de objetos con los datos de cada 
+* categoría de productos y los datos de los productos de esa categoría
+* @param {text} title -Representa el título de la categoría de productos
+* @param {array} productList -Es un arreglo de objetos con los datos del producto
+* @param {text} img -Es la ruta a la imagen del producto
+* @param {text} name -Es el nombre del producto 
+*
+*/
 const products=[
 
 	{
@@ -27,7 +36,12 @@ const products=[
 
 
 
-]
+];
+
+/**
+*
+* Muestra el menú con los productos a la venta
+*/
 function Menu(){
 
 
