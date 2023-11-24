@@ -26,7 +26,6 @@ function App() {
 
 function App() {
 	let {width} = useScreenSize();
-  {alert(width)}
   return (
     
     <Router>
