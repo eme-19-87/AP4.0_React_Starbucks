@@ -12,17 +12,17 @@ import FooterContactOptions from "./footerContact/footerContactOptions";
 *el formato con el cual se mostrará el pie.
 * 
 */
-function Footer({width}){
+function Footer(){
 	//let { width}=useScreenSize();
 	//alert(width);
 	return (
 		<footer className="mt-5">
-			<FooterOptions width={width} />
-			<FooterSocialNet width={width} />
-			<FooterContactOptions width={width} />
+			<FooterOptions/>
+			<FooterSocialNet/>
+			<FooterContactOptions/>
 		</footer>
 
-   )
+   );
 }
 
 export default Footer;

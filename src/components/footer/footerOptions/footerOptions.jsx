@@ -1,4 +1,6 @@
 import React from "react";
+import {useContext} from "react";
+import {WindowSizeContext} from "../../../App";
 import FooterColumnOptions from "./footerColumnOptions";
 import FooterAccordion from './footerAccordion';
 import "./footer.css";
@@ -94,9 +96,9 @@ function footerOptionsMobile(){
 * @param {integer} width - Representa el ancho de la pantalla.
 * 
 */
-function FooterOptions({width}){
-		
-	    if(width<=450){
+function FooterOptions(){
+		const width=useContext(WindowSizeContext);
+	    if(width<=750){
 	    	return footerOptionsMobile();
 	    }else{
 	    	return footerOptionsDesktop();

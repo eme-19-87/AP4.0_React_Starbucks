@@ -1,11 +1,13 @@
 import "./banner.css";
 import React from "react";
+import {useContext} from "react";
+import {WindowSizeContext} from "../../App";
 
 
 
 function placeCardMovil(imagen, titulo,subtitulo,bgColor){
   return (
-    <div className="container">
+    <div className="container mt-3 mb-2">
     <div className="row">
       <div className="col-12" >
        <div className="card">
@@ -122,7 +124,7 @@ function placeTextContainer(titulo,subtitulo,clase,conBoton,pColor,titleColor,bt
 */
 function placeCard(img,claseImg,titulo,subtitulo,claseTexto,flip,conBoton,bgColor,pColor,titleColor,btnTitulo){
   return(
-    <div className="container">
+    <div className="container mt-3 mb-2">
     <div className="card mb-3 drink__card"
     style={{
         backgroundColor:`${bgColor}`
@@ -153,8 +155,8 @@ function placeCard(img,claseImg,titulo,subtitulo,claseTexto,flip,conBoton,bgColo
 * @param {text} pColor -El color del texto que viene después del título.
 * @param {text} titleColor-El color del texto del título.
 */
-function Banner({data:{img,titulo,subtitulo,flip,conBoton,bgColor,pColor,titleColor,btnTitulo},width}){
-
+function Banner({data:{img,titulo,subtitulo,flip,conBoton,bgColor,pColor,titleColor,btnTitulo}}){
+    const width=useContext(WindowSizeContext);
     if(width>730){
        return placeCard(img,"img__desktop",titulo,subtitulo,"drink__body",flip,conBoton,bgColor,pColor,titleColor,btnTitulo);
     } else{

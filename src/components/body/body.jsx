@@ -1,4 +1,6 @@
 import React from 'react';
+import {useContext} from "react";
+import {ThemeContext,WindowSizeContext} from "../../App";
 import Banner from '../banner/banner';
 import Frapu from "../../assets/frapuccino.png";
 import Mochila from "../../assets/mochila.png";
@@ -47,11 +49,12 @@ const dataBody=[
 	}
 
 ]
-function Body({width}){
+function Body(){
+	    const width=useContext(WindowSizeContext);
 		return(
 
 			dataBody.map(dato=>{
-		return <Banner data={dato} width={width}/>
+		return <Banner data={dato}/>
 	})
 	)
 	

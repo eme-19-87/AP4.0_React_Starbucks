@@ -34,7 +34,7 @@ const dataBody=[
 		img:Banner5,
 		titulo:"Delivery",
 		subtitulo:"Los clientes pueden pedir sus bebidas y productos favoritos donde sea que estén con operadores logísticos al servicio como Pedidos Ya.",
-		flip:false,
+		flip:true,
 		conBoton:true,
 		bgColor:"#d4e9e2",
 		pColor:"#000",
@@ -47,7 +47,7 @@ const dataBody=[
 
 ];
 
-function Experiencia({width}){
+function Experiencia(){
    return (
 	 <>
 		<div>
@@ -60,7 +60,7 @@ function Experiencia({width}){
 			
 			</div>
 				{dataBody.map(dato=>{
-		return <Banner data={dato} width={width}/>
+		return <Banner data={dato}/>
 			})}
 	    </div>
 		

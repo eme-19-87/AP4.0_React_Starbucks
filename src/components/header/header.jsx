@@ -1,4 +1,6 @@
 import React from "react";
+import {useContext} from "react";
+import {ThemeContext,WindowSizeContext} from "../../App";
 import HeaderButton from "./headerButton/headerButton";
 import "./header.css";
 import logo from "../../assets/ico/logo.svg";
@@ -24,12 +26,20 @@ const buttonList = [
     customCss: "",
     img: "",
   },
+   {
+    name: "Admin",
+    link: "admin",
+    customCss: "",
+    img: "",
+  },
   {
     name: "Localizar tienda",
     link: "localizar",
     customCss: "header__button--right",
     img: "",
   },
+
+
 ];
 
 const homeData= {
@@ -93,7 +103,6 @@ function headerMobil(){
 Dependiendo el tamaño de la pantalla, se mostrarán unos elementos u otros.
 Los elementos comunes en este caso será el logo de la empresa.*/
 function showHeader(width){
-
    return(
     <header className="ms-5 me-5 ">
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -106,6 +115,7 @@ function showHeader(width){
           
             {width>950 ? headerDesktop():headerMobil()}
         </div>
+        <button>Cambiar Tema</button>
       </nav>
     
   </header>
@@ -120,9 +130,10 @@ mostrarán si se está en tamaño movil o el tamaño que se considere pertinente
 headerDesktop mostará los elementos que se deben ver cuando se están en escritorio.
 Parámetros:
 */
-function Header({width}) {
- 
- return showHeader(width);
+function Header() {
+  const theme=useContext(ThemeContext);
+  const windowSize=useContext(WindowSizeContext);
+ return showHeader(windowSize);
    
  
 }
