@@ -1,4 +1,7 @@
-
+.product-wrapper{
+	max-Width: 250px;
+	 margin: 0 auto;
+}
 
 
 .img__product{
@@ -11,7 +14,7 @@
 	width:160px;
 	height: 160px;
 	box-sizing: border-box;
-	margin-left: 30%;
+	
 
 	
 }

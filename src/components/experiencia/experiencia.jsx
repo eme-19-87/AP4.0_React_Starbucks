@@ -1,5 +1,7 @@
 import React from 'react';
 import Banner from '../banner/banner';
+import {useContext} from "react";
+import {ThemeContext} from "../../App";
 import BannerTitle from '../bannerTitle/bannerTitle';
 import Banner3 from "../../assets/img/banner_3.png";
 import Banner4 from "../../assets/img/banner_4.png";
@@ -34,7 +36,7 @@ const dataBody=[
 		img:Banner5,
 		titulo:"Delivery",
 		subtitulo:"Los clientes pueden pedir sus bebidas y productos favoritos donde sea que estén con operadores logísticos al servicio como Pedidos Ya.",
-		flip:false,
+		flip:true,
 		conBoton:true,
 		bgColor:"#d4e9e2",
 		pColor:"#000",
@@ -47,11 +49,12 @@ const dataBody=[
 
 ];
 
-function Experiencia({width}){
+function Experiencia(){
+	
    return (
 	 <>
 		<div>
-			<BannerTitle title="Experiencia Starbucks" bgColor="green" />
+			<BannerTitle title="Experiencia Starbucks"/>
 			
 			<div className="text-center p-3 fs-4 text-wrap d-flex justify-content-center">
 			<p className="w-50 p-3">
@@ -60,7 +63,7 @@ function Experiencia({width}){
 			
 			</div>
 				{dataBody.map(dato=>{
-		return <Banner data={dato} width={width}/>
+		return <Banner data={dato}/>
 			})}
 	    </div>
 		

@@ -1,4 +1,6 @@
 import React from "react";
+import {useContext} from "react";
+import {ThemeContext,WindowSizeContext} from "../../App";
 import HeaderButton from "./headerButton/headerButton";
 import "./header.css";
 import logo from "../../assets/ico/logo.svg";
@@ -24,12 +26,20 @@ const buttonList = [
     customCss: "",
     img: "",
   },
+   {
+    name: "Admin",
+    link: "admin",
+    customCss: "",
+    img: "",
+  },
   {
     name: "Localizar tienda",
     link: "localizar",
     customCss: "header__button--right",
     img: "",
   },
+
+
 ];
 
 const homeData= {
@@ -40,15 +50,27 @@ const homeData= {
   }
 
 
-/*Función que retorna la barra de navegación que se mostrará cuando se tenga una
-pantalla completa*/
-function headerDesktop(){
+/**
+*
+* Función que permite mostrar las opciones de la cabecera cuando se está en tamaño de escritorio
+*
+* @param {function} handleClickChangeTheme -Funciòn que controlará el cambio de tema de los banners
+* @param {text} Theme-String que define si el tema será claro u oscuro
+* @return {jsx} Retorna un objeto jsx que servirá para mostrar la barra de opciones en la cabecera
+* 
+*/
+function headerDesktop(handleClickChangeTheme,theme){
   return (
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex header__container">
         {buttonList.map((aButton) => {
               return <HeaderButton data={aButton} />;
             })}
+            <li className="change-theme">
+            <a onClick={handleClickChangeTheme}>
+              <i className={theme=="ligth"?"bi bi-moon-fill":"bi bi-brightness-high-fill"}></i>
+              </a>
+            </li>
       </ul>
       
       
@@ -58,11 +80,17 @@ function headerDesktop(){
  
 }
 
-/*Función que retorna los elementos que se mostrarán cuando se tenga una pantalla
-de móvil.
-Aquí los elementos no se disponen en un navbar horizontal, sino en una clase
-que Bootstap llama offcanvas.*/
-function headerMobil(){
+/**
+*
+* Componente que se encargará de mostrar la lista de opciones de la cabecera cuando se está en tamañp móvil. Este menú se mostrará
+*mediante una clase que maneja Boostrap denominado offcanvas
+*
+* @param {function} handleClickChangeTheme -Funciòn que controlará el cambio de tema de los banners
+* @param {text} Theme-String que define si el tema será claro u oscuro
+* @return {jsx} Retorna un objeto jsx que servirá para mostrar la barra de opciones en la cabecera en tamaño móvil
+* 
+*/
+function headerMobil(handleClickChangeTheme,theme){
           return(
                <>
         <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -80,6 +108,9 @@ function headerMobil(){
                       return <HeaderButton data={aButton} />;
                     })}
               </ul>
+              <li className="ms-5 change-theme">
+              <a onClick={handleClickChangeTheme}><i className={theme=="ligth"?"bi bi-moon-fill":"bi bi-brightness-high-fill"}></i></a>
+              </li>
           </div>
         </div>
        </>
@@ -89,40 +120,35 @@ function headerMobil(){
 
 
 
-/*Función que retorna los elementos comunes a la barra de navegación.
-Dependiendo el tamaño de la pantalla, se mostrarán unos elementos u otros.
-Los elementos comunes en este caso será el logo de la empresa.*/
-function showHeader(width){
 
-   return(
-    <header className="ms-5 me-5 ">
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container-fluid">
-        <NavLink className="color__text" to={homeData.link}>
-          <img src={logo} alt="Logo Starbuck" className="me-5"/>
-
-
-        </NavLink>
-          
-            {width>950 ? headerDesktop():headerMobil()}
-        </div>
-      </nav>
-    
-  </header>
-  )
-}
-
-
-/*La función que se exportará, para facilitar el modificar las partes,
-lo dividí en 3: showHeader retornará los elementos comunes a la barra dependiendo
-si está en movil o en escritorio, headerMobil retornará los elementos que se
-mostrarán si se está en tamaño movil o el tamaño que se considere pertinente,
-headerDesktop mostará los elementos que se deben ver cuando se están en escritorio.
-Parámetros:
+/**
+*
+* Componente que permitirá mostrar la lista de opciones de navegación en la cabecera. Dependiendo el tamaño de la pantalla, mostrará
+*una forma de desktop o una forma de móvil para adaptarse al tamaño en cuestión
+* 
 */
-function Header({width}) {
- 
- return showHeader(width);
+function Header() {
+  const {theme,setTheme}=useContext(ThemeContext);
+  const handleClickChangeTheme=()=>{setTheme(theme==="ligth"?"dark":"ligth")};
+  const width=useContext(WindowSizeContext);
+
+ return  (
+  <header className="ms-5 me-5 ">
+    <nav className="navbar navbar-expand-lg navbar-light">
+      <div className="container-fluid">
+      <NavLink className="color__text" to={homeData.link}>
+        <img src={logo} alt="Logo Starbuck" className="me-5"/>
+
+
+      </NavLink>
+        
+          {width>=980 ? headerDesktop(handleClickChangeTheme,theme):headerMobil(handleClickChangeTheme,theme)}
+      </div>
+   
+    </nav>
+  
+</header>
+);
    
  
 }

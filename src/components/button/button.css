@@ -1,3 +1,14 @@
-.class_home_first{
-	background-color: #fd7e14;
+.btn-dark{
+	background-color: #101010;
+	color:beige;
+	display: block;
+  	width: 100px;
+  	height: 100px;
+  	border-radius: 70%;
+}
+
+.btn-ligth{
+	background-color: #14fd66;
+	color: #121413;
+	border-bottom-left-radius: 10%;
 }

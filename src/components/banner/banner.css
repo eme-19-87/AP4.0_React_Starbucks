@@ -1,20 +1,11 @@
 
-div{
-  padding:0;
-  margin:0;
-}
 
-
-.btn{
-  border-radius: 30%;
-  margin-top:10%;
-  border:2px solid black;
-}
 .drink__card{
   
   margin:0 auto;
 
 }
+
 
 .drink__card .card-body{
   margin:0 auto;
@@ -22,9 +13,9 @@ div{
 
 .img__desktop{
   max-height: 800px;
-  max-height: 800px;
+  max-width: 800px;
   width: 100%;
-    height: 100%;
+  height: 100%;
  
 }
 

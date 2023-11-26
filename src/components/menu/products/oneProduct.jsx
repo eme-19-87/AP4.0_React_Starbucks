@@ -1,5 +1,4 @@
 import React from 'react';
-import Prod1 from "../../../assets/producto1.png";
 import "./products.css";
 
 /**
@@ -11,10 +10,10 @@ import "./products.css";
 */
 function OneProduct({data:{img,name}}){
   return (
-  <div class="col-lg-4 col-sm-12 col-md-4">
+  <div class="col-lg-4 col-sm-12 col-md-4 product-wrapper">
   <div class="card radius__card">
     
-    <div class="card-body">
+    <div class="card-body text-center">
     <div>
     	<img src={img} class="card-img-top" alt="..."/>
     </div>
@@ -22,8 +21,8 @@ function OneProduct({data:{img,name}}){
     </div>
     
   </div>
-    <div class="card-footer mt-3">
-    <h5 class="text-center">{name}</h5>
+    <div class="card-footer mt-3 ms-2">
+    <h5>{name}</h5>
   </div>
   </div>
 

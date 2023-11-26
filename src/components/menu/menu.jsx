@@ -1,42 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {AppContext} from '../../App';
 import Products from './products/products';
-import Bagel from '../../assets/Bagel-Sandwich.png';
-import Moneda from '../../assets/Moneda.png';
-import Croissant from '../../assets/Croissant-Relleno-Avellana.png';
-import Chocolate from '../../assets/Chocolate Caliente.png';
-import DulceLeche from '../../assets/Dulce de leche Frapp.png'
-import ICM from '../../assets/Iced Caramel Macchiato.png'
 
-/**
-* @param {array} products -Representa un arreglo de objetos con los datos de cada 
-* categoría de productos y los datos de los productos de esa categoría
-* @param {text} title -Representa el título de la categoría de productos
-* @param {array} productList -Es un arreglo de objetos con los datos del producto
-* @param {text} img -Es la ruta a la imagen del producto
-* @param {text} name -Es el nombre del producto 
-*
-*/
-const products=[
-
-	{
-	title:"Comida",
-	productList:[
-	{img:Bagel,name:"Sandiwichs y Preparados"},
-	 {img:Moneda,name:"Snacks"},
-	 {img:Croissant,name:"Bakery"}
-	]},
-	{title:"Bebidas",
-	productList:[
-	{img:Chocolate,name:"Chocolate Caliente"},
-	 {img:DulceLeche,name:"Frapuccino"},
-	 {img:ICM,name:"Cafés Helados"}
-	 ]
-	
-    }
-
-
-
-];
 
 /**
 *
@@ -44,9 +9,8 @@ const products=[
 */
 function Menu(){
 
-
-
-
+	const {prodState}=useContext(AppContext);
+	const products=prodState;
 	return (
 	   <>
 		<div class="ms-5 container">

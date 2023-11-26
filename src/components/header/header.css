@@ -7,3 +7,6 @@ header .header__container{
 }
 
 
+.change-theme:hover{
+    cursor:pointer;
+}

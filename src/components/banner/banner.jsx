@@ -1,33 +1,25 @@
 import "./banner.css";
 import React from "react";
+import BannerMovil from './bannerMovil/bannerMovil';
+import Button from '../button/button'
+import {useContext} from "react";
+import {WindowSizeContext} from "../../App";
 
 
-
-function placeCardMovil(imagen, titulo,subtitulo,bgColor){
-  return (
-    <div className="container">
-    <div className="row">
-      <div className="col-12" >
-       <div className="card">
-        <img src={imagen} className="card-img-top" alt="..."/>
-        <div className="card-body"  style={{
-        backgroundColor:`${bgColor}`
-      }}>
-          <h3 className="card-title">{titulo}</h3>
-          <p>
-            {subtitulo}
-          </p>
-        </div>
-      </div>
-   </div>
-    
-    </div>
-    </div>
-   
-   
-
-  
-  )
+/**
+*
+* Permite colocar el banner cuando se tiene un tamaño móvil
+*
+* @param {text} titulo -El texto que se mostrará como título del banner.
+* @param {text} subtítulo -El texto que se mostrará después del título.
+* @param {text} bgColor -El color de fondo del banner.
+* @param {text} imagen -La imagen que se mostrará en el banner
+* @return {jsx} -Retorna un componente que mostrarà el banner con la imagen arriba y el texto de bajo para adaptarse a las pantallas
+* más pequeñas
+*/
+function placeCardMovil(imagen, titulo,subtitulo,bgColor,withButton,btnTitle){
+  return <BannerMovil imagen={imagen} titulo={titulo} subtitulo={subtitulo} bgColor={bgColor} withButton={withButton}
+  btnTitle={btnTitle}/>
 }
 
 /**
@@ -38,12 +30,7 @@ function placeCardMovil(imagen, titulo,subtitulo,bgColor){
 *
 */
 function placeButton(btnTitulo){
-  return(
-    <div className="d-flex justify-content-center">
-      <button type="button" className="btn">{btnTitulo}</button>
-    </div>
-    
-    )
+  return <Button titulo={btnTitulo} theme="dark"/>
   
 }
 
@@ -122,7 +109,7 @@ function placeTextContainer(titulo,subtitulo,clase,conBoton,pColor,titleColor,bt
 */
 function placeCard(img,claseImg,titulo,subtitulo,claseTexto,flip,conBoton,bgColor,pColor,titleColor,btnTitulo){
   return(
-    <div className="container">
+    <div className="container mt-3 mb-2">
     <div className="card mb-3 drink__card"
     style={{
         backgroundColor:`${bgColor}`
@@ -153,12 +140,12 @@ function placeCard(img,claseImg,titulo,subtitulo,claseTexto,flip,conBoton,bgColo
 * @param {text} pColor -El color del texto que viene después del título.
 * @param {text} titleColor-El color del texto del título.
 */
-function Banner({data:{img,titulo,subtitulo,flip,conBoton,bgColor,pColor,titleColor,btnTitulo},width}){
-
-    if(width>730){
+function Banner({data:{img,titulo,subtitulo,flip,conBoton,bgColor,pColor,titleColor,btnTitulo}}){
+    const width=useContext(WindowSizeContext);
+    if(width>=980){
        return placeCard(img,"img__desktop",titulo,subtitulo,"drink__body",flip,conBoton,bgColor,pColor,titleColor,btnTitulo);
     } else{
-      return placeCardMovil(img,titulo,subtitulo,bgColor);
+      return placeCardMovil(img,titulo,subtitulo,bgColor,conBoton,btnTitulo);
     }
  
   

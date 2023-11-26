@@ -9,24 +9,26 @@ import OneProduct from './oneProduct'
 * @param {array} productList -Representa una lista con los datos del producto
 */
 function Products({data:{title, productList}}){
-
-	return(
-		<>
-		<div class="container">
-			<hr/>
-			<div className="w-75">{title}</div>
+    if(productList.length>0){
+		return(
+			<>
+			<div class="container">
 				<hr/>
-		   		<div class="row">
-		  
-				{productList.map((prod) => {
-		                      return <OneProduct data={prod} />;
-		                    })}
+				<div className="w-75">{title}</div>
+					<hr/>
+					   <div class="row offset-1 col-10">
+			  
+					{productList.map((prod) => {
+								  return <OneProduct data={prod} />;
+								})}
+					</div>
 				</div>
-			</div>
-        
-		</>
-
-	)
+			
+			</>
+	
+		)
+	}
+	
 }
 
 export default Products;

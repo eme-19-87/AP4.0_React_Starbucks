@@ -1,0 +1,19 @@
+.title-bar-ligth {
+    background-color: #3e8374;
+    padding: 50px;
+    color: rgb(18, 16, 16);
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+  
+  }
+
+  .title-bar-dark {
+    background-color: #000706;
+    padding: 50px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+  
+  }
