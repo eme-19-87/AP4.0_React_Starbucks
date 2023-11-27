@@ -6,6 +6,11 @@ import {useForm} from 'react-hook-form';
 import BannerTitle from '../bannerTitle/bannerTitle';
 
 
+/**
+*Función que permite dejar en blanco los inputs del formulario una vez creado el nuevo producto
+* 
+*/
+
 function eraseInput(){
 	const nameInput=document.getElementById("nomProd");
 	const imgInput=document.getElementById("imgProd");
@@ -40,7 +45,7 @@ async function encodeFileAsBase64URL(file) {
 *  @param {function} dispatch -La función dispatch asociada al useReduce que servirá para modificar el estado de los productos
 *  y permitirá agregar al nuevo.
 *
-* aplicación.
+* 
 */
 function addNewProduct(name,category,img,prodState,dispatch){
 	let products=prodState;
@@ -67,6 +72,7 @@ function addNewProduct(name,category,img,prodState,dispatch){
 function Admin(){
 const [img,setImg]=useState("");
 const {prodState,dispatch}=useContext(AppContext);
+const products=prodState;
 
 //Se ejecuta cuando se agrega una nueva imagen y la modifica a base64
  const onChange = (e) => {
@@ -77,7 +83,7 @@ const {prodState,dispatch}=useContext(AppContext);
 
  }
 	
-	const products=prodState;
+	
 
 	/*
 	register permite registrar cada input
@@ -91,12 +97,15 @@ const {prodState,dispatch}=useContext(AppContext);
 		 formState:{errors}
 	}=useForm();
 
-	//Lo que se ejecutará cuando se presione el botón para enviar el formulario
+	//La función onSubmit es lo que se ejecutará cuando se presione el botón submit del formulario
+	//handelSubmit es propio de React Hook Form y recuperará los datos del formulario para enviárselos a la función que
+	//agregará los datos
 	const onSubmit=handleSubmit((data)=>{
 		const category=data.categoria;
 		const name=data.nomProd;
 		addNewProduct(name,category,img,prodState,dispatch);
 	});
+
    return (
 	 <>
 	 <BannerTitle title="Administración Productos"/>

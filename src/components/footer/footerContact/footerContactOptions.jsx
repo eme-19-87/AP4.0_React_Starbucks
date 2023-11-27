@@ -13,8 +13,8 @@ function listOptionsMobil(){
 
 	return(
 		<ul>
-				{optionList.map(option=>{
-				return (<li className="contact__option mt-3">{option.name}</li>)
+				{optionList.map((option,index)=>{
+				return (<li className="contact__option mt-3" key={index} >{option.name}</li>)
 			     
 			})}
 	    </ul>
@@ -30,13 +30,13 @@ function listOptionsDesktop(){
   		
 		{optionList.map((option,index)=>{
 			if(index<optionList.length-1){
-				return <a className="contact__option ms-2 text-center">{`${option.name}`}
+				return <a className="contact__option ms-2 text-center" key={index}>{`${option.name}`}
 							<span className="ms-3">|</span>
 						</a>
 
 		} else{
 			return (
-				<a className="contact__option ms-2 text-center">{`${option.name}`}
+				<a className="contact__option ms-2 text-center" key={index}>{`${option.name}`}
 				</a>
 			)
 		}

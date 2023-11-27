@@ -9,7 +9,7 @@ li.nav-item{
   
 
 }
-li.nav-item:hover:before {
+.mark__option:hover:before {
   content: "";
   width: 100%;
   bottom: -20px;

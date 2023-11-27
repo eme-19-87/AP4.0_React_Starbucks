@@ -16,8 +16,8 @@ function FooterSocialNet(){
   		<hr/>
   		<div className="d-flex justify-content-center">
   		
-		{socialNetworks.map(social=>{
-			return <a><i className={`${social.icon} me-5 mt-3`}></i></a>
+		{socialNetworks.map((social,index)=>{
+			return <a key={index} ><i className={`${social.icon} me-5 mt-3`} ></i></a>
 		     
 		})}
         

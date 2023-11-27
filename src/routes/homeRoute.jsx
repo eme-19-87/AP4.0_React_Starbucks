@@ -1,10 +1,9 @@
 import React from "react";
 import Body from "../components/body/body";
-function HomePage({width}) {
-	{alert (`Width en HomePage: ${width}`)}
+function HomePage() {
   return (
     
-      <Body width={width} />
+      <Body />
   
   );
 }

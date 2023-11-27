@@ -1,0 +1,9 @@
+.coffee__banner{
+    width: 400px;
+    border:0;
+}
+.coffee__banner img{
+    max-width: 30rem;
+    max-height: 20rem;
+    height: 80%;
+}

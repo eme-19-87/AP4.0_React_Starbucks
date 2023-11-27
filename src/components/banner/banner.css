@@ -1,13 +1,13 @@
 
 
-.drink__card{
+.banner__card{
   
   margin:0 auto;
 
 }
 
 
-.drink__card .card-body{
+.banner__card .card-body{
   margin:0 auto;
 }
 
@@ -28,13 +28,13 @@
     background-size: cover;
 }
 
-.drink__card h2{
+.banner__card h2{
   padding:10%;
   font-size: 40px;
   text-align: center;
 }
 
-.drink__card p{
+.banner__card p{
      
      font-size: 25px;
      margin: 0 auto;

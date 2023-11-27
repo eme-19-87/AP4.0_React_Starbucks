@@ -1,10 +1,14 @@
 import React from 'react';
+import {useContext} from "react";
+import './button.css';
+import {ThemeContext} from "../../App";
+function Button({title}){
+	const {theme}=useContext(ThemeContext);
 
-function Button({titulo,theme}){
 	return(
 		<div className="d-flex justify-content-center mt-3">
 			<button type="button" className={`btn-${theme}`}>
-      	{titulo}
+      	{title}
       </button>
 		</div>
 		

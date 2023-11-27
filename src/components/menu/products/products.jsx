@@ -16,10 +16,10 @@ function Products({data:{title, productList}}){
 				<hr/>
 				<div className="w-75">{title}</div>
 					<hr/>
-					   <div class="row offset-1 col-10">
+					   <div class="row">
 			  
 					{productList.map((prod) => {
-								  return <OneProduct data={prod} />;
+								  return <OneProduct data={prod} key={prod.name} />;
 								})}
 					</div>
 				</div>

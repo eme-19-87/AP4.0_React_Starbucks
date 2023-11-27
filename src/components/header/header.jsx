@@ -63,8 +63,8 @@ function headerDesktop(handleClickChangeTheme,theme){
   return (
        <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex header__container">
-        {buttonList.map((aButton) => {
-              return <HeaderButton data={aButton} />;
+        {buttonList.map((aButton,index) => {
+              return <HeaderButton data={aButton} mark={true} key={aButton.name+index}/>;
             })}
             <li className="change-theme">
             <a onClick={handleClickChangeTheme}>
@@ -94,18 +94,18 @@ function headerMobil(handleClickChangeTheme,theme){
           return(
                <>
         <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="offcanvas offcanvas-end" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-header d-flex justify-content-end">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+        <div className="offcanvas offcanvas-end" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div className="offcanvas-header d-flex justify-content-end">
+            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
             </button>
           </div>
-          <div class="offcanvas-body">
+          <div className="offcanvas-body">
             <ul>
-                {buttonList.map((aButton) => {
-                      return <HeaderButton data={aButton} />;
+                {buttonList.map((aButton, index) => {
+                      return <HeaderButton data={aButton} mark={false} key={aButton.name+index} />;
                     })}
               </ul>
               <li className="ms-5 change-theme">
@@ -155,17 +155,3 @@ function Header() {
 
 export default Header;
 
-/*
-<nav>
-       
-        <div className="wrapper navbar navbar-expand-lg ">
-         
-          <ul className="header__container ">
-            {buttonList.map((aButton) => {
-              return <HeaderButton data={aButton} />;
-            })}
-          </ul>
-        </div>
-      </nav>
-
-*/

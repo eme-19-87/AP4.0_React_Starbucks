@@ -9,7 +9,9 @@ import Footer from "./components/footer/footer";
 import MenuPage from "./routes/menuRoute";
 import HomePage from "./routes/homeRoute";
 import ExperienciaPage from "./routes/experienciaRoute";
+import CoffeePage from "./routes/coffeeRoute.jsx";
 import AdminPage from "./routes/adminRoute";
+import LocationPage from "./routes/locationRoute.jsx";
 import Wrapper from "./components/wrapper";
 
 /*-----Imagenes Iniciales-----*/
@@ -81,7 +83,7 @@ function setInitialState(){
         }
   ];
   if(localStorage.getItem("products")!==null){
-    initialState=JSON.parse(localStorage.getItem("products"))
+    initialState=JSON.parse(localStorage.getItem("products"));
   };
 
   return initialState;
@@ -113,7 +115,9 @@ function App() {
             <Route path="/" element={<HomePage />}/>
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/experiencia" element={<ExperienciaPage/>} />
+            <Route path="/coffee" element={<CoffeePage/>} />
             <Route path="/admin" element={<AdminPage/>} />
+            <Route path="/localizar" element={<LocationPage/>} />
         </Routes>
       </Wrapper>
        <Footer/>

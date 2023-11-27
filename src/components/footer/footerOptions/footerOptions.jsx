@@ -7,7 +7,7 @@ import "./footer.css";
 import DatosFiscales from "../../../assets/img-data-fiscal.jpg"
 
 /**
-*
+* Los datos que se mostrarán en cada columna del pie cuando se esté en una pantalla grande o mediana
 * @param {text} cabecera -Representa el título de la columna de opciones en el footer
 * @param {array} opciones -Representa las opciones mostradas en cada columna
 */
@@ -47,12 +47,12 @@ function footerOptionsDesktop(){
 			
 			<div className="row">
 
-			    {columnas.map((col) => {
+			    {columnas.map((col,index) => {
               return <FooterColumnOptions cabecera={col.cabecera} 
-              opciones={col.opciones} />;
+              opciones={col.opciones} index={index} key={col.cabecera} />;
             })}
 
-			   <div className="col-2">
+			   <div className="col-2 d-flex justify-content-end">
 				    <ul>
 				    	<li>
 					<img src={DatosFiscales} className=" logo__fiscal" alt="Logo datos fiscales"/>
@@ -76,9 +76,9 @@ function footerOptionsMobile(){
 	return (
 		<>
 		{
-			columnas.map((col) => {
+			columnas.map((col,index) => {
 	              return <FooterAccordion cabecera={col.cabecera} 
-	              opciones={col.opciones} />;
+	              opciones={col.opciones} key={col.cabecera + index} />;
 	            })
 		}
 		<img src={DatosFiscales} className=" logo__fiscal" alt="Logo datos fiscales"/>

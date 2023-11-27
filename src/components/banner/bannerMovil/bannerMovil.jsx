@@ -3,12 +3,12 @@ import Button from '../../button/button';
 /**
 *
 * Permite colocar el botón en la tarjeta, si es que esta lo lleva.
-*@param {text} btnTitulo -Representa el texto que se mostrará en el botón
+*@param {text} btnTitle -Representa el texto que se mostrará en el botón
 *
 *
 */
-function placeButton(btnTitulo){
-    return <Button titulo={btnTitulo} theme="ligth"/>
+function placeButton(btnTitle){
+    return <Button titulo={btnTitle} theme="ligth"/>
     
   }
 
@@ -16,14 +16,16 @@ function placeButton(btnTitulo){
 *
 * Permite colocar el banner cuando se tiene un tamaño móvil
 *
-* @param {text} titulo -El texto que se mostrará como título del banner.
-* @param {text} subtítulo -El texto que se mostrará después del título.
+* @param {text} title -El texto que se mostrará como título del banner.
+* @param {text} subtitle -El texto que se mostrará después del título.
 * @param {text} bgColor -El color de fondo del banner.
 * @param {text} imagen -La imagen que se mostrará en el banner
+* @param {boolean} withButton -Si tiene o no un botón
+* @param {text} btnTitle -El texto que se mostrará en el botón
 * @return {jsx} -Retorna un componente que mostrarà el banner con la imagen arriba y el texto de bajo para adaptarse a las pantallas
 * más pequeñas
 */
-function BannerMovil({imagen, titulo,subtitulo,bgColor,withButton,btnTitle}){
+function BannerMovil({imagen, title,subtitle,bgColor,withButton,btnTitle}){
     return (
         <div className="container mt-3 mb-2">
         <div className="row">
@@ -33,9 +35,9 @@ function BannerMovil({imagen, titulo,subtitulo,bgColor,withButton,btnTitle}){
             <div className="card-body"  style={{
             backgroundColor:`${bgColor}`
           }}>
-              <h3 className="card-title text-center wrapper">{titulo}</h3>
+              <h3 className="card-title text-center wrapper">{title}</h3>
               <p className="text-center">
-                {subtitulo}
+                {subtitle}
               </p>
               {withButton?placeButton(btnTitle):null}
             </div>

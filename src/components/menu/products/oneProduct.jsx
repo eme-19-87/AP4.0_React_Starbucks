@@ -10,10 +10,11 @@ import "./products.css";
 */
 function OneProduct({data:{img,name}}){
   return (
-  <div class="col-lg-4 col-sm-12 col-md-4 product-wrapper">
-  <div class="card radius__card">
-    
-    <div class="card-body text-center">
+  <div className="col-lg-4 col-sm-6 col-xs-6 col-md-4">
+    <div className="d-flex-justify-content-center">
+    <div className="card">
+    <div className="radius__card">
+    <div className="card-body product__bod">
     <div>
     	<img src={img} class="card-img-top" alt="..."/>
     </div>
@@ -21,9 +22,13 @@ function OneProduct({data:{img,name}}){
     </div>
     
   </div>
-    <div class="card-footer mt-3 ms-2">
-    <h5>{name}</h5>
+    <div className="card-footer mt-3 ms-2">
+    <h5 className="text-center">{name}</h5>
   </div>
+    </div>
+ 
+    </div>
+  
   </div>
 
  

@@ -13,11 +13,11 @@ function Menu(){
 	const products=prodState;
 	return (
 	   <>
-		<div class="ms-5 container">
+		<div class="container">
 			<h5>¡Disfrútalos!</h5>
 			<h2>Conoce nuestras bebidas y alimentos de temporada</h2>
 				{products.map(prod=>{
-			return <Products data={prod}/>
+			return <Products data={prod} key={prod.title} />
 		    }
 		  )}
 	    </div>
