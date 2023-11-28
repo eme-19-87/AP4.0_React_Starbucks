@@ -1,10 +1,10 @@
 .title-bar-ligth {
-    background-color: #3e8374;
-    padding: 50px;
-    color: rgb(18, 16, 16);
-    font-size: 2rem;
-    text-align: center;
-    position: relative;
+    background-color: #3e8374!important;
+    padding: 50px!important;
+    color: rgb(18, 16, 16)!important;
+    font-size: 2rem!important;
+    text-align: center!important;
+    position: relative!important;
   
   }
 

@@ -7,16 +7,17 @@ import OneProduct from './oneProduct'
 *
 * @param {text} title -Representa el título de la categoría del producto
 * @param {array} productList -Representa una lista con los datos del producto
+* @return {jsx} -Retorna los elementos que mostrarán una fila de productos
 */
 function Products({data:{title, productList}}){
     if(productList.length>0){
 		return(
 			<>
-			<div class="container">
+			<div className="container">
 				<hr/>
 				<div className="w-75">{title}</div>
 					<hr/>
-					   <div class="row">
+					   <div className="row">
 			  
 					{productList.map((prod) => {
 								  return <OneProduct data={prod} key={prod.name} />;

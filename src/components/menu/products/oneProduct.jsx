@@ -7,6 +7,7 @@ import "./products.css";
 *
 * @param {text} img -Representa la ruta de la imagen del producto
 * @param {text} name -Representa el nombre del producto
+* @return {jsx} -Retorna el componente para mostrar un solo producto
 */
 function OneProduct({data:{img,name}}){
   return (
@@ -16,7 +17,7 @@ function OneProduct({data:{img,name}}){
     <div className="radius__card">
     <div className="card-body product__bod">
     <div>
-    	<img src={img} class="card-img-top" alt="..."/>
+    	<img src={img} className="card-img-top" alt="..."/>
     </div>
       
     </div>

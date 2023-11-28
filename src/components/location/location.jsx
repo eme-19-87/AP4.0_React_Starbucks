@@ -2,7 +2,15 @@ import React from "react";
 import BannerTitle from '../bannerTitle/bannerTitle';
 import './location.css';
 
+/**
+*
+* Retorna los elementos que mostrará un mapa con la localización de las tiendas
+*
+* 
+* @return {jsx} -Retorna los elementos que mostrarán el mapa con la localizacón de las tiendas
+*/
 function Location(){
+    document.title="Sucursales";
     return(
         <>
        <BannerTitle title={"Ubicaciones De Tiendas"} />

@@ -56,7 +56,7 @@ const dataBody=[
 * 
 */
 function Body(){
-	  
+	document.title="Home";
 		
 		return(
 

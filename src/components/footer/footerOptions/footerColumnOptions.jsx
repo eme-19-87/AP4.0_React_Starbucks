@@ -26,7 +26,7 @@ function FooterColumnOptions({cabecera,opciones,index}){
 				   {cabecera!=="Datos Fiscales"?cabecera:""}
 				</li>
 				{opciones.map((op) => {
-              return <FooterOptionsList opcion={op} key={op.titulo} />;
+              return <FooterOptionsList opcion={op} key={index} />;
             })}
 			
 			</ul>

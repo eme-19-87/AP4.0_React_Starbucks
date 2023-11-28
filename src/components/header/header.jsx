@@ -10,33 +10,33 @@ const buttonList = [
     name: "MENU",
     link: "menu",
     customCss: "",
-    img: "",
+
   },
  
   {
     name: "COFFEE",
     link: "coffee",
     customCss: "",
-    img: "",
+  
   },
   
   {
     name: "EXPERIENCIA",
     link: "experiencia",
     customCss: "",
-    img: "",
+ 
   },
    {
     name: "Admin",
     link: "admin",
     customCss: "",
-    img: "",
+  
   },
   {
     name: "Localizar tienda",
     link: "localizar",
     customCss: "header__button--right",
-    img: "",
+   
   },
 
 
@@ -67,9 +67,9 @@ function headerDesktop(handleClickChangeTheme,theme){
               return <HeaderButton data={aButton} mark={true} key={aButton.name+index}/>;
             })}
             <li className="change-theme">
-            <a onClick={handleClickChangeTheme}>
-              <i className={theme=="ligth"?"bi bi-moon-fill":"bi bi-brightness-high-fill"}></i>
-              </a>
+            <button className="enlace" onClick={handleClickChangeTheme}>
+              <i className={theme==="ligth"?"bi bi-moon-fill":"bi bi-brightness-high-fill"}></i>
+              </button>
             </li>
       </ul>
       
@@ -109,7 +109,7 @@ function headerMobil(handleClickChangeTheme,theme){
                     })}
               </ul>
               <li className="ms-5 change-theme">
-              <a onClick={handleClickChangeTheme}><i className={theme=="ligth"?"bi bi-moon-fill":"bi bi-brightness-high-fill"}></i></a>
+              <button className="enlace" onClick={handleClickChangeTheme}><i className={theme==="ligth"?"bi bi-moon-fill":"bi bi-brightness-high-fill"}></i></button>
               </li>
           </div>
         </div>
@@ -125,6 +125,7 @@ function headerMobil(handleClickChangeTheme,theme){
 *
 * Componente que permitirá mostrar la lista de opciones de navegación en la cabecera. Dependiendo el tamaño de la pantalla, mostrará
 *una forma de desktop o una forma de móvil para adaptarse al tamaño en cuestión
+* @return {jsx} Retorna un objeto jsx para mostrar la cabecera de opciones de la página según el tamaño de la pantalla
 * 
 */
 function Header() {

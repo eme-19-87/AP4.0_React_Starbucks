@@ -78,6 +78,7 @@ const data=[
 *  @return {jsx} Retorna un objeto jsx que contendrá todos los componentes para mostrar la información sobre café
 */
 function Coffee(){
+    document.title="Nuestro Café";
  return(
     <>
      <BannerTitle title={"Nuestro Café"} />

@@ -11,7 +11,7 @@ function FooterOptionsList({opcion}){
 		 
 			      
 			      	<li className="mb-3">
-			      		<a href="" className="opcion">{opcion}</a>
+			      		<button  className="opcion enlace text-wrap">{opcion}</button>
 			      	</li>
 
 	)

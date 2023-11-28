@@ -23,6 +23,7 @@ function eraseInput(){
 *
 * Función que permite convertir una imagen a base64 para guardarla en formato de string
 *  @param {file} file -Representa los datos del archivo para realizar la conversión
+* @return {promise} -Retorna una promesa 
 */
 async function encodeFileAsBase64URL(file) {
     return new Promise((resolve) => {
@@ -68,8 +69,10 @@ function addNewProduct(name,category,img,prodState,dispatch){
 /**
 *
 * Componente que permitirá mostrar el formulario para agregar un nuevo producto;
+* @return {jsx} -Retorna los elementos para mostrar el formulario de alta de producto
 */
 function Admin(){
+document.title="Administrador";
 const [img,setImg]=useState("");
 const {prodState,dispatch}=useContext(AppContext);
 const products=prodState;

@@ -4,11 +4,11 @@ import Button from '../../button/button';
 *
 * Permite colocar el botón en la tarjeta, si es que esta lo lleva.
 *@param {text} btnTitle -Representa el texto que se mostrará en el botón
-*
+*@param {jsx} -Retorna el elemento que mostrará el botón del banner
 *
 */
 function placeButton(btnTitle){
-    return <Button titulo={btnTitle} theme="ligth"/>
+    return <Button title={btnTitle} theme="ligth"/>
     
   }
 

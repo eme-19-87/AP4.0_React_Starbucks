@@ -78,7 +78,7 @@ function footerOptionsMobile(){
 		{
 			columnas.map((col,index) => {
 	              return <FooterAccordion cabecera={col.cabecera} 
-	              opciones={col.opciones} key={col.cabecera + index} />;
+	              opciones={col.opciones} key={index} id={col.cabecera.substring(0,col.cabecera.indexOf(" "))} />;
 	            })
 		}
 		<img src={DatosFiscales} className=" logo__fiscal" alt="Logo datos fiscales"/>

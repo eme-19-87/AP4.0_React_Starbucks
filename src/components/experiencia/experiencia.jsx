@@ -65,11 +65,15 @@ const dataBody=[
 /**
 *
 * Componente que mostrará los datos en las tarjetas para la pestaña experiencia
+
+* @return {jsx} -Retorna  los componentes que mostrarán los datos de la experiencia
 */
+
 function Experiencia(){
 	
    return (
 	 <>
+	 	
 		<div>
 			<BannerTitle title="Experiencia Starbucks"/>
 			

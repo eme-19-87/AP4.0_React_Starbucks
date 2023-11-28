@@ -99,7 +99,7 @@ function setInitialState(){
 function App() {
   const initialState=setInitialState();
 	const {width} = useScreenSize();
-  const [theme, setTheme] = useState("ligth");
+  const [theme, setTheme] = useState("dark");
   const [prodState,dispatch]=useReducer(reducer,initialState);
    
   return (

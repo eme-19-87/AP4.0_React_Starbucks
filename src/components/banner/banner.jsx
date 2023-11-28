@@ -90,13 +90,15 @@ function placeCard(img,claseImg,title,subtitle,textClass,flip,button,bgColor,pCo
         usando la clase card. */}    
         {flip ? placeImgTag(img,claseImg):placeTextContainer(title,subtitle,textClass,button,pColor,titleColor,btnTitle)}
         {!flip ? placeImgTag(img,claseImg) : placeTextContainer(title,subtitle,textClass,button,pColor,titleColor,btnTitle)}
-    
+         
           </div>
        </div>
        </div>
   )
 
 }
+
+
 
 /**
 *

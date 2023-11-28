@@ -13,8 +13,7 @@ import FooterContactOptions from "./footerContact/footerContactOptions";
 * 
 */
 function Footer(){
-	//let { width}=useScreenSize();
-	//alert(width);
+	
 	return (
 		<footer className="mt-5">
 			<FooterOptions/>
