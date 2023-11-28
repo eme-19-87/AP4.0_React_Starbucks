@@ -70,7 +70,7 @@ const dataBody=[
 */
 
 function Experiencia(){
-	
+	document.title="Experiencia"
    return (
 	 <>
 	 	

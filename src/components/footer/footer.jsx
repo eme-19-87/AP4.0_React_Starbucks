@@ -2,6 +2,7 @@ import React from "react";
 import FooterOptions from "./footerOptions/footerOptions";
 import FooterSocialNet from "./footerContact/footerSocialNet";
 import FooterContactOptions from "./footerContact/footerContactOptions";
+import Copyrigth from "./copyrigth/copyrigth";
 //import useScreenSize from '../../hooks/useScreenSize.js'
 
 /**
@@ -19,6 +20,7 @@ function Footer(){
 			<FooterOptions/>
 			<FooterSocialNet/>
 			<FooterContactOptions/>
+			<Copyrigth/>
 		</footer>
 
    );
