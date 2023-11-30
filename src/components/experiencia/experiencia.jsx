@@ -70,7 +70,8 @@ const dataBody=[
 */
 
 function Experiencia(){
-	document.title="Experiencia"
+	document.title="Experiencia"//Notas JH: Es un muy buen detalle que no habia visto a la primera, 
+	// investiga acerca de React Helmet, para modificar lo que tengamos en la etiqueta <head>
    return (
 	 <>
 	 	

@@ -56,7 +56,8 @@ const dataBody=[
 * 
 */
 function Body(){
-	document.title="Home";
+	document.title="Home"; //Notas JH: Es un muy buen detalle que no habia visto a la primera, 
+	// investiga acerca de React Helmet, para modificar lo que tengamos en la etiqueta <head>
 		
 		return(
 

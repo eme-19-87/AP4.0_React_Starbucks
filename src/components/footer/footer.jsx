@@ -22,7 +22,7 @@ function Footer(){
 			<FooterContactOptions/>
 			<Copyrigth/>
 		</footer>
-
+	//Notas JH: Me gusta que el footer este separado en componentes
    );
 }
 

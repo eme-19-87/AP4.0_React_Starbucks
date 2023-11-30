@@ -118,6 +118,11 @@ function App() {
             <Route path="/coffee" element={<CoffeePage/>} />
             <Route path="/admin" element={<AdminPage/>} />
             <Route path="/localizar" element={<LocationPage/>} />
+
+            {/* Nota JH: Evitaria la redundancia en las rutas solo para una mayor
+            legibilidad, ya que cuando quiero ir a ver la ruta por ejemplo
+            <MenuPage/> me encuentro que devuelve <Menu/>, puede quedar raro a la lectura,
+            pero no afecta en nada a la web*/}
         </Routes>
       </Wrapper>
        <Footer/>
@@ -130,3 +135,8 @@ function App() {
 }
 
 export default App;
+
+//Nota JH: Notas adicionales que no se donde meter
+// - No es necesario importar React en cada componente, ya que no lo estas usando
+// - Mejoraria el naming de algunos componentes. Sea por mayusculas o por buscar un nombre mas descriptivo
+// - El nombre de los assets buscaria simplificarlos, a poder ser un solo nombre, sin espacios, y en minusculas

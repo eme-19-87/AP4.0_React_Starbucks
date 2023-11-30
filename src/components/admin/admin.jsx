@@ -16,7 +16,9 @@ function eraseInput(){
 	const imgInput=document.getElementById("imgProd");
 	nameInput.value="";
 	imgInput.value=null;
-
+	//Notas JH: No es recomendable acceder a las propiedades del DOM directamente
+	//en React. Es mejor usar el estado para manejar los valores de los inputs.
+	
 }
 
 /**
@@ -64,6 +66,9 @@ function addNewProduct(name,category,img,prodState,dispatch){
 		payload:products
 	});
 
+	//Notas JH: addNewProduct() junto a eraseInput() son funciones que modifican el estado
+	//del componente Admin. Es mejor que esten dentro del componente Admin para que sea más
+	//fácil de leer y entender.
 }
 
 /**
@@ -72,7 +77,8 @@ function addNewProduct(name,category,img,prodState,dispatch){
 * @return {jsx} -Retorna los elementos para mostrar el formulario de alta de producto
 */
 function Admin(){
-document.title="Administrador";
+document.title="Administrador"; //Notas JH: Es un muy buen detalle que no habia visto a la primera, 
+								// investiga acerca de React Helmet, para modificar lo que tengamos en la etiqueta <head>
 const [img,setImg]=useState("");
 const {prodState,dispatch}=useContext(AppContext);
 const products=prodState;
@@ -98,7 +104,7 @@ const products=prodState;
 	const {register, 
 		 handleSubmit, 
 		 formState:{errors}
-	}=useForm();
+	}=useForm(); //Notas JH: Me gusto mucho que te animes a usar otros Hooks por tu cuenta
 
 	//La función onSubmit es lo que se ejecutará cuando se presione el botón submit del formulario
 	//handelSubmit es propio de React Hook Form y recuperará los datos del formulario para enviárselos a la función que

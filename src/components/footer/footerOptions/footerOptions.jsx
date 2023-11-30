@@ -107,4 +107,6 @@ function FooterOptions(){
 	
 }
 
+//Notas JH: Lo mismo que para Banner, me gusta el uso de la renderizacion condicional. Recorda que los componentes siempre 
+//deben comenzar con mayuscula, por lo que deberia llamarse FooterOptions. Para no confundirlos con funciones normales
 export default FooterOptions;

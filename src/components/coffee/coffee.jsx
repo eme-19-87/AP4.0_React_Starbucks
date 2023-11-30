@@ -78,7 +78,8 @@ const data=[
 *  @return {jsx} Retorna un objeto jsx que contendrá todos los componentes para mostrar la información sobre café
 */
 function Coffee(){
-    document.title="Nuestro Café";
+    document.title="Nuestro Café";//Notas JH: Es un muy buen detalle que no habia visto a la primera, 
+    // investiga acerca de React Helmet, para modificar lo que tengamos en la etiqueta <head>
  return(
     <>
      <BannerTitle title={"Nuestro Café"} />
@@ -95,4 +96,5 @@ function Coffee(){
  )
 }
 
+//Notas JH: Buena modularizacion
 export default Coffee;
