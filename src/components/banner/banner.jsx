@@ -126,6 +126,7 @@ function Banner({data:{img,title,subtitle,flip,button,bgColor,pColor,titleColor,
  
   
 }
-
+//Nota JH: Me agrada el uso de la renderizacion condicional. Recorda que los componentes siempre
+// se escriben en mayusculas. PlaceCard() y PlaceCardMovil() al estar en minusculas, parecen funciones   
 export default Banner;
 
